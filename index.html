@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 
@@ -6,53 +8,42 @@
   <head>
     <link rel='stylesheet' type='text/css' href='style.css'/>
     <meta charset="UTF-8">
-    <title>Guthrie Burns</title>
+    <title>Dog Quiz</title>
   </head>
 
   <body>
-    <section id="main-bio">
-      <h1>Guthrie Burns</h1>
-        <article>
-          <img src="image.png" alt="Picture Of Me"></a>
-            <p>
-              <em>Picture Of Me</em>
-            </p>
-        </article>
-          <p>
-            Random paragraph about me.
-          </p><br>
-          <p>
-            Another random paragraph about me lol
-          </p>
-          <h3>Socials</h3>
-            <ul>
-              <li>www.notareallink.com</li>
-              <li>www.alsonotareallink.com</li>
-              <li>www.stillnotareallink.com</li>
-                <!-- The ol ending tag was missing the backslash -->
-            </ul>
-            <table>
-              <tr>
-                <th>Books</th>
-                <th>Movies</th>
-                <th>Games</th>
-              </tr>
-              <tr>
-                <td>Book1</td>
-                <td>Movie1</td>
-                <td>Game1</td>
-              </tr>
-              <tr>
-                <td>Book2</td>
-                <td>Movie2</td>
-                <td>Game2</td>
-              </tr>
-              <tr>
-                <td>Book3</td>
-                <td>Movie3</td>
-                <td>Game3</td>
-              </tr>
-            </table>
-          </section>
+      <h1>Guess The Dog!</h1>
+      <script type="text/javascript">
+  
+        var imlocation = "images/";
+        var currentdate = 0;
+        var image_number = 0;
+        function ImageArray (n) {
+          this.length = n;
+          for (var i =1; i <= n; i++) {
+            this[i] = ' '
+          }
+        }
+        image = new ImageArray(9)
+        image[0] = 'bea.png'
+        image[1] = 'gr.png'
+        image[2] = 'lab.png'
+        image[3] = 'gs.png'
+        image[4] = 'chi.png'
+        image[5] = 'dasch.png'
+        image[6] = 'husk.png'
+        image[7] = 'pug.png'
+        image[8] = 'pom.png'
+        var rand = 60/image.length
+        function randomimage() {
+          currentdate = new Date()
+          image_number = currentdate.getSeconds()
+          image_number = Math.floor(image_number/rand)
+          return(image[image_number])
+        }
+        document.write("<img src='" + imlocation + randomimage()+ "'>");
+       
+       </script>
+       <p></p>
   </body>
 </html>
