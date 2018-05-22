@@ -1,53 +1,89 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
-  <head>
-    <link rel='stylesheet' type='text/css' href='style.css'/>
-    <meta charset="UTF-8">
-    <title>Dog Quiz</title>
-  </head>
-
-  <body>
-      <h1>Guess The Dog!</h1>
-      <script type="text/javascript">
+<head>
+  <meta charset="UTF-8">
+  <title>Site</title>
   
-        var imlocation = "images/";
-        var currentdate = 0;
-        var image_number = 0;
-        function ImageArray (n) {
-          this.length = n;
-          for (var i =1; i <= n; i++) {
-            this[i] = ' '
-          }
-        }
-        image = new ImageArray(13)
-        image[0] = 'bea.png'
-        image[1] = 'gr.png'
-        image[2] = 'lab.png'
-        image[3] = 'gs.png'
-        image[4] = 'chi.png'
-        image[5] = 'dasch.png'
-        image[6] = 'husk.png'
-        image[7] = 'pug.png'
-        image[8] = 'pom.png'
-        image[9] = 'sb.png'
-        image[10] = 'shib.png'
-        image[11] = 'chow.png'
-        image[12] = 'shih.png'
-        var rand = 60/image.length
-        function randomimage() {
-          currentdate = new Date()
-          image_number = currentdate.getSeconds()
-          image_number = Math.floor(image_number/rand)
-          return(image[image_number])
-        }
-        document.write("<img src='" + imlocation + randomimage()+ "'>");
-       
-       </script>
-       <p></p>
-  </body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="main">
+<div class="container">
+    <div class="header">
+            <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 latitude">
+                            <h1 class ="lat_text">Lattitude</a></h1>
+                    </div>
+        
+                    <div class="col-xs-hidden col-sm-7 col-md-7 col-lg-7">
+                            
+        
+                    </div>                
+        
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 buttons">
+                        <div class="dropdown">
+                                <button class="dropbtn">Dropdown</button>
+                                <div class="dropdown-content">
+                                  <a href="temp.html">Temperature</a>
+                                  <a href="humidity.html">Humidity</a>
+                                  <a href="cloud.html">Cloudiness</a>
+                                  <a href="wind.html">Wind Speed</a>
+                                </div>
+                              </div>
+
+                        
+                        <p class="comparison"><a href="comp.html" role="button">Comparison</a></p>
+                        <p class="data"><a href="data.html" role="button">Data</a></p>
+                    </div>
+                
+                
+        
+                        
+                </div>
+
+    </div>
+
+    <div class="second_row">
+
+        <div class="row">
+                <div class="col-xs-12 col-sm-12  col-md-8 col-lg-8 main_box">
+                        <h1 class="sechead">Summary Latitude vs. X</h1>
+                        <div class="main_box_content">
+                            <img class= "temperature" src="Resources/Fig1.png" alt="Temperetire_pic">
+                            <p class="para1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur dui ut magna rutrum accumsan. Nam quis tellus mattis, cursus enim in, volutpat massa. Etiam vitae nisl risus. Nulla ac elementum mi, vitae interdum neque. Fusce volutpat, enim ut auctor posuere, mi neque gravida mauris, sit amet aliquet lorem magna vel erat. Cras id nibh euismod, condimentum turpis eget, rutrum sem. Sed ligula orci, dapibus sit amet purus vitae, fringilla tempor est. Pellentesque ultrices odio eu urna egestas, quis maximus nisl auctor. Suspendisse nec lacus at neque dictum venenatis. Ut a nulla ipsum. </p>
+                            <p class="para2">Proin finibus sagittis pulvinar. Praesent vel magna et risus ullamcorper vulputate non ac mi. Fusce viverra velit at ligula ullamcorper volutpat. Praesent mollis justo maximus molestie semper. Suspendisse imperdiet, arcu ut accumsan congue, justo quam finibus ante, ac ultrices ipsum libero euismod mi. Nulla ac sapien eu ante sodales vestibulum ut sit amet arcu. Mauris interdum libero dapibus arcu dictum accumsan. Cras lacus leo, euismod nec convallis ut, pharetra blandit eros. Aliquam porttitor elit sed eros scelerisque, feugiat facilisis elit lacinia. Maecenas justo arcu, blandit nec leo id, efficitur faucibus orci. </p>   
+                        </div>
+                </div>
+                   
+        
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 right_box">
+                        <h1 class="sechead">Graphs</h1>
+
+                        <div class= "second_box_content">
+                                <a href="temp.html" >
+                                        <img class= "temp " src="Resources/Fig1.png"  alt="Latitude Vs. Temperature">
+                                </a>
+                                <a href="humidity.html" >
+                                        <img class= "humidity" src="Resources/Fig2.png" alt="Latitude Vs. Humidity">
+                                </a>
+                                <a href="cloud.html" >
+                                        <img class= "cloudiness" src="Resources/Fig3.png" alt="Latitude Vs. Cloudiness"> 
+                                </a>
+                                <a href="wind.html" >
+                                        <img class= "wind_speed" src="Resources/Fig4.png" alt="Latitude Vs. Wind Speed">  
+                                </a>
+                        </div>
+                </div>
+              
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</body>
+
 </html>
